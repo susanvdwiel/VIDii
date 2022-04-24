@@ -13,10 +13,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Jij
 
 ### Ontwerper:
-Sanne 't Hooft (vervangen door jouw naam)
+Susan van de Wiel
 
 #### Je startniveau:
-Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
+Mijn startniveau is: rood
 
 
 
@@ -160,9 +160,14 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 <summary>continu bijhouden terwijl je werkt</summary>
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
-
-1. bron 1
-2. bron 2
-3. ...
+https://css-tricks.com/the-shapes-of-css/
+https://www.w3schools.com/tags/tag_section.asp
+https://www.modernways.be/myap/it/page/programming/html/element/section.html
+https://learntutorials.net/nl/html/topic/311/sectie-elementen
+https://developer.mozilla.org/en-US/docs/Web/CSS/repeat
+https://www.codegrepper.com/code-examples/css/css+mirror+element
+https://www.w3schools.com/tags/tag_ol.asp
+https://www.w3schools.com/howto/howto_css_flip_image.asp
+https://stackoverflow.com/questions/9916354/is-it-valid-to-have-a-section-tag-inside-another-section-tag#:~:text=Yes!,section%3E's%20are%20allowed
 
 </details>
