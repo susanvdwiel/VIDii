@@ -1,0 +1,1037 @@
+/* CSS Document */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #7CAFE0;
+    overflow: hidden;
+}
+
+button:not([disabled]) {
+    cursor: pointer;
+}
+
+/*////////////*/
+/*KLEURENPALET*/
+/*////////////*/
+
+:root {
+    --wolk: #EFEFEF;
+    --leder-woody: #9F5223;
+    --riem-schoen: #BC6D52;
+    --broekspijp: #3D8FCA;
+    --sjaal: #C94737;
+    --haren: #2F1620;
+    --shirt: #EACA44;
+    --strepen-shirt: #CB932F;
+    --grijper: #5B5B5B;
+    --buttons: #C94737;
+}
+
+/*Logo in het midden van het scherm*/
+body > header > a > img {
+    position: fixed;
+    display: block;
+    width: 7em;
+    left: calc(50% - 3.5em);
+    top: 2em;
+    z-index: 4000;
+}
+
+
+
+/*///////////*/
+/*GORDIJNTJES*/
+/*///////////*/
+body > article.tekst > section.tekst_woody > img {
+    position: fixed;
+    display: block;
+    width: 50%;
+    left: 25%;
+    top: calc(50% - 6em);
+    z-index: 20;
+
+    animation-name: achtergrondnaarlinks;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes achtergrondnaarlinks {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-30em);
+    }
+}
+
+body > article.tekst > section.quote_woody > img {
+    position: fixed;
+    display: block;
+    width: 45em;
+    left: calc(50% - 22.5em);
+    top: calc(50% + 3em);
+    z-index: 20;
+
+    animation-name: achtergrondnaarrechts;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes achtergrondnaarrechts {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-30em);
+    }
+}
+
+body > article > section.bruineachtergrond {
+    position: fixed;
+    background-color: #9F5223;
+    height: 100vh;
+    width: 50vw;
+    z-index: 10;
+
+    animation-name: achtergrondnaarlinks;
+    animation-duration: 5s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes achtergrondnaarlinks {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100em);
+    }
+}
+
+body > article > section.geleachtergrond {
+    position: fixed;
+    background-color: #EACA44;
+    height: 100vh;
+    width: 50vw;
+    left: 50%;
+    z-index: 10;
+
+    animation-name: achtergrondnaarrechts;
+    animation-duration: 5s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes achtergrondnaarrechts {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100em);
+    }
+}
+
+
+
+/*///////////////////*/
+/*WOLKJES ACHTERGROND*/
+/*///////////////////*/
+body > article > section.wolkenachtergrond > div.wolk1 > div.cirkel1 {
+    position: absolute;
+    width: 8em;
+    height: 1.2em;
+    left: calc(25% + 2em);
+    top: calc(25% + 1em);
+    background-color: var(--wolk);
+    border-radius: 3em 2.5em 2.5em 3em;
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 > div.cirkel2 {
+    position: absolute;
+    width: 4.5em;
+    height: 2em;
+    left: calc(25% + 3.5em);
+    top: calc(25% - 0.1em);
+    background-color: var(--wolk);
+    border-radius: 3em 2.5em 2.5em 3em;
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 > div.cirkel3 {
+    position: absolute;
+    width: 4.5em;
+    height: 3em;
+    left: calc(25% + 3.5em);
+    top: calc(25% - 2em);
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 > div.cirkel3:hover {
+    transform: scale(2);
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 > div.cirkel4 {
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    left: calc(25% + 2.8em);
+    top: calc(25% - 0.2em);
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 > div.cirkel5 {
+    position: absolute;
+    width: 2.2em;
+    height: 2em;
+    left: calc(25% + 7em);
+    top: calc(25% - .2em);
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 {
+    position: absolute;
+    top: calc(50% + 3em);
+    left: calc(50% + 10em);
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 > div.cirkel1 {
+    position: absolute;
+    width: 8em;
+    height: 1.2em;
+    left: calc(25% + 2em);
+    top: calc(25% + 1em);
+    background-color: var(--wolk);
+    border-radius: 3em 2.5em 2.5em 3em;
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 > div.cirkel2 {
+    position: absolute;
+    width: 4.5em;
+    height: 2em;
+    left: calc(25% + 3.5em);
+    top: calc(25% - 0.1em);
+    background-color: var(--wolk);
+    border-radius: 3em 2.5em 2.5em 3em;
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 > div.cirkel3 {
+    position: absolute;
+    width: 4.5em;
+    height: 3em;
+    left: calc(25% + 3.5em);
+    top: calc(25% - 2em);
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 > div.cirkel4 {
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    left: calc(25% + 2.8em);
+    top: calc(25% - 0.2em);
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 > div.cirkel5 {
+    position: absolute;
+    width: 2.2em;
+    height: 2em;
+    left: calc(25% + 7em);
+    top: calc(25% - .2em);
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+/*//////////////////*/
+/*STIJLING VAN WOODY*/
+/*//////////////////*/
+body > main > article.woody {
+    position: relative;
+    top: 55vh;
+    transform: scale(0.9);
+    z-index: 10;
+
+    animation-name: woodygrijperbutton;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes woodygrijperbutton {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body > main > article.woody > section.woodypoppetje {
+    animation-name: verdwijnen;
+    animation-duration: 3s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes verdwijnen {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+body > main > article.woody > section.woodypoppetje > section.lichaam {
+    position: absolute;
+    width: 9em;
+    height: 10.7em;
+    left: calc(50% - 4.5em);
+    top: calc(50% + 0.5em);
+    border-radius: 2em 2em 0.5em 0.5em;
+    background-color: var(--shirt);
+    background-image:
+        linear-gradient(to right,
+            transparent 0%,
+            transparent 15%,
+            var(--strepen-shirt) 15%,
+            var(--strepen-shirt) 17%,
+            transparent 17%,
+            transparent 32%,
+            var(--strepen-shirt) 32%,
+            var(--strepen-shirt) 34%,
+            transparent 34%,
+            transparent 49%,
+            var(--strepen-shirt) 49%,
+            var(--strepen-shirt) 51%,
+            transparent 51%,
+            transparent 66%,
+            var(--strepen-shirt) 66%,
+            var(--strepen-shirt) 68%,
+            transparent 68%,
+            transparent 83%,
+            var(--strepen-shirt) 83%,
+            var(--strepen-shirt) 85%,
+            transparent 85%,
+            transparent 100%),
+        linear-gradient(to bottom,
+            transparent 0%,
+            transparent 15%,
+            var(--strepen-shirt) 15%,
+            var(--strepen-shirt) 17%,
+            transparent 17%,
+            transparent 32%,
+            var(--strepen-shirt) 32%,
+            var(--strepen-shirt) 34%,
+            transparent 34%,
+            transparent 49%,
+            var(--strepen-shirt) 49%,
+            var(--strepen-shirt) 51%,
+            transparent 51%,
+            transparent 66%,
+            var(--strepen-shirt) 66%,
+            var(--strepen-shirt) 68%,
+            transparent 68%,
+            transparent 83%,
+            var(--strepen-shirt) 83%,
+            var(--strepen-shirt) 85%,
+            transparent 85%,
+            transparent 100%);
+}
+
+body > main > article.woody > section.woodypoppetje > section.hoofd {
+    position: absolute;
+    left: calc(50% - 4em);
+    top: calc(50% - 8em);
+    width: 8em;
+    height: 9em;
+    background-color: #F3E3C8;
+    border-radius: 2em;
+}
+
+body > main > article.woody > section.woodypoppetje > section.hoed {
+    position: absolute;
+    left: calc(50% - 4.5em);
+    top: calc(50% - 10.8em);
+    border-bottom: 4.5em solid var(--leder-woody);
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    width: 9em;
+    border-radius: 3em 3em 0.2em 0.2em;
+    z-index: 2;
+}
+
+body > main > article.woody > section.woodypoppetje > section.onderkant_hoed {
+    position: absolute;
+    left: calc(50% - 4.5em);
+    top: calc(50% - 6.7em);
+    width: 9em;
+    height: 1.5em;
+    background-color: var(--leder-woody);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+body > main > article.woody > section.woodypoppetje > section.onderkant_hoed > div.hoed_links {
+    position: absolute;
+    left: calc(50% - 6.7em);
+    top: calc(50% - 0.9em);
+    width: 3em;
+    height: 0.9em;
+    background-color: var(--leder-woody);
+    border-radius: 0.1em 0 0 0.5em;
+    transform: rotate(15deg);
+    z-index: 1;
+}
+
+body > main > article.woody > section.woodypoppetje > section.onderkant_hoed > div.hoed_rechts {
+    position: absolute;
+    right: calc(50% - 6.7em);
+    top: calc(50% - 0.9em);
+    width: 3em;
+    height: 0.9em;
+    background-color: var(--leder-woody);
+    border-radius: 0 0.1em 0.5em 0;
+    transform: rotate(-15deg);
+    z-index: 1;
+}
+
+body > main > article.woody > section.woodypoppetje > section.bakkenbaard_links {
+    position: absolute;
+    border-bottom: 20px solid var(--haren);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    width: 110px;
+    left: calc(50% - 7em);
+    top: calc(50% - 5.5em);
+    transform: rotate(270deg) scale(0.7);
+    border-radius: 1em;
+    z-index: 1;
+}
+
+body > main > article.woody > section.woodypoppetje > section.bakkenbaard_links > div.bovenkant {
+    position: absolute;
+    width: 4em;
+    height: 0.7em;
+    left: calc(50% - 4.5em);
+    top: calc(50% + 0.9em);
+    border-radius: 0.3em;
+    background-color: var(--haren);
+}
+
+body > main > article.woody > section.woodypoppetje > section.bakkenbaard_links > div.onderkant {
+    position: absolute;
+    width: 4em;
+    height: 1.3em;
+    left: calc(50% - 2.3em);
+    top: calc(50% + 0.9em);
+    border-radius: 50%;
+    transform: rotate(10deg);
+    background-color: var(--haren);
+}
+
+body > main > article.woody > section.woodypoppetje > section.bakkenbaard_rechts {
+    position: absolute;
+    border-bottom: 20px solid var(--haren);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    width: 110px;
+    right: calc(50% - 7em);
+    top: calc(50% - 5.5em);
+    transform: rotate(90deg) scale(0.7);
+    border-radius: 1em;
+    z-index: 1;
+}
+
+body > main > article.woody > section.woodypoppetje > section.bakkenbaard_rechts > div.bovenkant {
+    position: absolute;
+    width: 4em;
+    height: 0.7em;
+    right: calc(50% - 4.5em);
+    top: calc(50% + 0.9em);
+    border-radius: 0.3em;
+    background-color: var(--haren);
+}
+
+body > main > article.woody > section.woodypoppetje > section.bakkenbaard_rechts > div.onderkant {
+    position: absolute;
+    width: 4em;
+    height: 1.3em;
+    right: calc(50% - 2.3em);
+    top: calc(50% + 0.9em);
+    border-radius: 50%;
+    transform: rotate(-10deg);
+    background-color: var(--haren);
+}
+
+
+body > main > article.woody > section.woodypoppetje > section.sjaal {
+    position: absolute;
+    left: calc(50% - 4em);
+    top: calc(50% + 0.4em);
+    width: 8em;
+    height: 1.2em;
+    background-color: var(--sjaal);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+body > main > article.woody > section.woodypoppetje > section.sjaal > .puntje_sjaal {
+    position: absolute;
+    left: calc(50% - 6.2em);
+    top: calc(50% - 1.3em);
+    width: 3em;
+    height: 0.9em;
+    background-color: var(--sjaal);
+    border-radius: 50%;
+    transform: rotate(40deg);
+    z-index: 1;
+}
+
+body > main > article.woody > section.woodypoppetje > .gilet_links {
+    position: absolute;
+    width: 1.8em;
+    height: 7em;
+    background-color: white;
+    border-radius: 0 0em 2em 0;
+    right: calc(50% + 1.4em);
+    top: calc(50% + 1em);
+}
+
+body > main > article.woody > section.woodypoppetje > .gilet_links > div.zijkant {
+    position: absolute;
+    width: 1.5em;
+    height: 3.5em;
+    background-color: white;
+    right: calc(50% + 0.7em);
+    top: calc(50% + .3em);
+    transform: skewY(-20deg);
+}
+
+body > main > article.woody > section.woodypoppetje > .gilet_links > div.koeienvlek1 {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: black;
+    right: calc(50% - 0.7em);
+    top: calc(50% + 0.6em);
+}
+
+body > main > article.woody > section.woodypoppetje > .gilet_links > div.koeienvlek2 {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: black;
+    right: calc(50% - 0.5em);
+    top: calc(50% - 1.8em);
+}
+
+body > main > article.woody > section.woodypoppetje > .gilet_links > div.koeienvlek3 {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: black;
+    right: calc(50% + 0.9em);
+    top: calc(50% + 1.9em);
+}
+
+body > main > article.woody > section.woodypoppetje > .gilet_rechts {
+    position: absolute;
+    width: 1.8em;
+    height: 7em;
+    background-color: white;
+    border-radius: 0 0em 0em 2em;
+    left: calc(50% + 1.4em);
+    top: calc(50% + 1em);
+}
+
+body > main > article.woody > section.woodypoppetje > .gilet_rechts > div.koeienvlek1 {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: black;
+    left: calc(50% - 0.7em);
+    top: calc(50% + 0.6em);
+}
+
+body > main > article.woody > section.woodypoppetje > .gilet_rechts > div.koeienvlek2 {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: black;
+    left: calc(50% - 0.5em);
+    top: calc(50% - 1.8em);
+}
+
+body > main > article.woody > section.woodypoppetje > .gilet_rechts > div.koeienvlek3 {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: black;
+    left: calc(50% + 0.9em);
+    top: calc(50% + 1.9em);
+}
+
+body > main > article.woody > section.woodypoppetje > .gilet_rechts > div.zijkant {
+    position: absolute;
+    width: 1.5em;
+    height: 3.5em;
+    background-color: white;
+    left: calc(50% + 0.7em);
+    top: calc(50% + 0.3em);
+    transform: skewY(20deg);
+}
+
+
+body > main > article.woody > section.woodypoppetje > section.riem {
+    position: absolute;
+    left: calc(50% - 4.3em);
+    top: calc(50% + 11em);
+    width: 8.6em;
+    height: 2.2em;
+    background-color: var(--riem-schoen);
+    border-radius: 0.4em;
+}
+
+body > main > article.woody > section.woodypoppetje > section.broekspijp_links {
+    position: absolute;
+    left: calc(50% - 3.8em);
+    top: calc(50% + 13em);
+    width: 2.4em;
+    height: 1.5em;
+    background-color: var(--broekspijp);
+    z-index: -1;
+}
+
+body > main > article.woody > section.woodypoppetje > section.broekspijp_links > div.sok {
+    position: absolute;
+    left: calc(50% - 1.25em);
+    top: calc(50% + 0.6em);
+    width: 2.5em;
+    height: 1.7em;
+    background-color: var(--riem-schoen);
+    z-index: -1;
+}
+
+body > main > article.woody > section.woodypoppetje > section.broekspijp_links > div.schoen {
+    position: absolute;
+    left: calc(50% - 1.45em);
+    top: calc(50% + 2em);
+    width: 2.9em;
+    height: 1.7em;
+    background-color: var(--riem-schoen);
+    border-radius: 0.2em;
+    z-index: -1;
+}
+
+body > main > article.woody > section.woodypoppetje > section.broekspijp_rechts {
+    position: absolute;
+    right: calc(50% - 3.8em);
+    top: calc(50% + 13em);
+    width: 2.4em;
+    height: 1.5em;
+    background-color: var(--broekspijp);
+    z-index: -1;
+}
+
+body > main > article.woody > section.woodypoppetje > section.broekspijp_rechts > div.sok {
+    position: absolute;
+    left: calc(50% - 1.25em);
+    top: calc(50% + 0.6em);
+    width: 2.5em;
+    height: 1.7em;
+    background-color: var(--riem-schoen);
+    z-index: -1;
+}
+
+body > main > article.woody > section.woodypoppetje > section.broekspijp_rechts > div.schoen {
+    position: absolute;
+    left: calc(50% - 1.45em);
+    top: calc(50% + 2em);
+    width: 2.9em;
+    height: 1.7em;
+    background-color: var(--riem-schoen);
+    border-radius: 0.2em;
+    z-index: -1;
+}
+
+
+
+/*////////////////*/
+/*STIJLING GRIJPER*/
+/*////////////////*/
+body > main > article.woody > section.grijper {
+    position: fixed;
+    left: 50%;
+    top: -62em;
+    z-index: -150;
+}
+
+/* Animatie wordt uigevoerd wanneer er op de button wordt geklikt -> de grijper gaat op en neer */
+.grijper_beweeg {
+    animation-name: bewegen;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bewegen {
+
+    0%,
+    100% {}
+
+    50% {
+        transform: translatey(calc(45vw + 2em));
+    }
+}
+
+body > main > article.woody > section.grijper > section.touw {
+    position: absolute;
+    width: 0.8em;
+    height: 55em;
+    left: calc(50% - .4em);
+    top: -10em;
+    z-index: 50;
+    border-radius: 0 0 1em 1em;
+    background-image: linear-gradient(to bottom,
+            var(--grijper) 0%,
+            var(--grijper) 15%,
+            transparent 15%,
+            transparent 17%,
+            var(--grijper) 17%,
+            var(--grijper) 32%,
+            transparent 32%,
+            transparent 34%,
+            var(--grijper) 34%,
+            var(--grijper) 49%,
+            transparent 49%,
+            transparent 51%,
+            var(--grijper) 51%,
+            var(--grijper) 66%,
+            transparent 66%,
+            transparent 68%,
+            var(--grijper) 68%,
+            var(--grijper) 83%,
+            transparent 83%,
+            transparent 85%,
+            var(--grijper) 85%,
+            var(--grijper) 100%);
+}
+
+body > main > article.woody > section.grijper > section.touw > section.knijper_links {
+    position: absolute;
+    border-bottom: 20px solid var(--grijper);
+    border-left: 5px solid transparent;
+    border-right: 35px solid transparent;
+    width: 160px;
+    transform: rotate(-200deg);
+    left: calc(50% - 9.5em);
+    top: calc(50% + 27em);
+    z-index: 5;
+}
+
+body > main > article.woody > section.grijper > section.touw > section.knijper_onderkantl {
+    position: absolute;
+    border-bottom: 150px solid var(--grijper);
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    width: 40px;
+    transform: rotate(-200deg);
+    left: calc(50% - 7.9em);
+    top: calc(50% + 28.1em);
+    z-index: 5;
+}
+
+body > main > article.woody > section.grijper > section.touw > section.knijper_rechts {
+    position: absolute;
+    border-bottom: 20px solid var(--grijper);
+    border-left: 35px solid transparent;
+    border-right: 5px solid transparent;
+    width: 160px;
+    transform: rotate(200deg);
+    right: calc(50% - 9.5em);
+    top: calc(50% + 27em);
+    z-index: 5;
+}
+
+body > main > article.woody > section.grijper > section.touw > section.knijper_onderkantr {
+    position: absolute;
+    border-bottom: 150px solid var(--grijper);
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    width: 40px;
+    transform: rotate(200deg);
+    right: calc(50% - 7.9em);
+    top: calc(50% + 28.1em);
+    z-index: 5;
+}
+
+
+
+/*////////////////////*/
+/*STIJLING VAN BUTTONS*/
+/*////////////////////*/
+body > main > ol {
+    position: fixed;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    padding: 3em;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    list-style: none;
+    z-index: 999;
+
+    animation-name: woodygrijperbutton;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+body > main > ol.buttonslinks {
+    left: 0;
+}
+
+body > main > ol.buttonsrechts {
+    right: 0;
+}
+
+body > main > ol > li > a > img {
+    display: grid;
+    justify-items: center;
+    width: 10em;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+body > main > article.verschillendewoodys > section > img {
+    display: block;
+    position: fixed;
+    width: 32%;
+}
+
+body > main > article.verschillendewoodys > section.woodyuit1995 {
+    position: absolute;
+    left: calc(50% - 11.8em);
+    top: 60em;
+    z-index: 200;
+
+    animation-name: woody1995;
+    animation-duration: 5s;
+    animation-delay: 2.5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes woody1995 {
+    0% {
+        
+    }
+
+    100% {
+        transform: translatey(calc(50% - 17em));
+    }
+}
+*/
+
+
+
+
+
+
+
+
+/*////////*/
+/*DE ALIEN*/
+/*////////*/
+body > main > article > section.alienpoppetje {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    animation-name: alien;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes alien {
+    
+}
+
+
+body > main > article > section.alienpoppetje > section.lichaam {
+    position: absolute;
+    width: 9em;
+    height: 8em;
+    left: calc(50% - 4.5em);
+    top: calc(50% + 0.5em);
+    border-radius: 0em 0em 2em 2em;
+    background-image:
+        linear-gradient(to bottom,
+            #4EABC6 0%,
+            #4EABC6 20%,
+            #5A554F 20%,
+            #5A554F 25%,
+            #4EABC6 25%,
+            #4EABC6 60%,
+            #2780AC 60%,
+            #2780AC 70%,
+            #4EABC6 70%,
+            #4EABC6 100%);
+}
+
+body > main > article > section.alienpoppetje > section.hoofd {
+    position: absolute;
+    width: 11em;
+    height: 8em;
+    left: calc(50% - 5.5em);
+    top: calc(50% - 4.5em);
+    border-radius: 50%;
+    background-color: #B2C81D;
+    z-index: 2;
+}
+
+/*
+body > main > article > section.alienpoppetje > section.onderkin {
+    position: absolute;
+    width: 10em;
+    height: 7em;
+    left: calc(50% - 5em);
+    top: calc(50% - 3.2em);
+    border-radius: 50%;
+    background-color: #5A554F;
+    z-index: 1;
+}
+*/
+
+body > main > article > section.alienpoppetje > section.mond {
+    position: absolute;
+    width: 7em;
+    height: 0.2em;
+    left: calc(50% - 3.5em);
+    top: calc(50% + 1em);
+    border-radius: 0.5em;
+    background-color: #5A554F;
+    z-index: 2;
+}
+
+body > main > article > section.alienpoppetje > section.mond > section.binnenkant {
+    position: absolute;
+    width: 2em;
+    height: 1em;
+    left: calc(50% - 1em);
+    top: calc(50% - .5em);
+    border-radius: 50%;
+    background-color: #5A554F;
+}
+
+body > main > article > section.alienpoppetje > section.oorlinks {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1.5em solid transparent;
+    border-right: 1.1em solid transparent;
+    border-bottom: 4em solid #B2C81D;
+    left: calc(50% - 6.5em);
+    top: calc(50% - 5em);
+    transform: rotate(-5deg);
+}
+
+
+body > main > article > section.alienpoppetje > section.oorrechts {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1.5em solid transparent;
+    border-right: 1.1em solid transparent;
+    border-bottom: 4em solid #B2C81D;
+    right: calc(50% - 6.5em);
+    top: calc(50% - 5em);
+    transform: rotate(5deg);
+}
+
+body > main > article > section.alienpoppetje > section.antene {
+    position: absolute;
+    width: 0.5em;
+    height: 4em;
+    background-color: #B2C81D;
+    left: calc(50% - 0.25em);
+    top: calc(50% - 7.5em);
+}
+
+body > main > article > section.alienpoppetje > section.antene > section.stipje {
+    position: absolute;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    background-color: #B2C81D;
+    left: calc(50% - 0.6em);
+    top: calc(50% - 2.5em);
+}
+
+body > main > article > section.alienpoppetje > section.benenlinks {
+    position: absolute;
+    width: 2.5em;
+    height: 1.7em;
+    background-color: #2780AC;
+    border-radius: 0em 0em 0.5em 0.5em;
+    left: calc(50% - 3em);
+    top: calc(50% + 8.5em);
+}
+
+body > main > article > section.alienpoppetje > section.benenrechts {
+    position: absolute;
+    width: 2.5em;
+    height: 1.7em;
+    background-color: #2780AC;
+    border-radius: 0em 0em 0.5em 0.5em;
+    right: calc(50% - 3em);
+    top: calc(50% + 8.5em);
+}
