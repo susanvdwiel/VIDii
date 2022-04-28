@@ -1782,7 +1782,7 @@ body > main > ol {
 button {
     width: 0%;
 
-    background-color: rgba(0, 0, 0, 0);
+/*    background-color: rgba(0, 0, 0, 0);*/
     border: 0;
 }
 
@@ -1890,24 +1890,4 @@ section.poef {
         transform: translateY(-34em) scale(4);
         opacity: 0;
     }
-}
-
-
-
-/*///////////////////////*/
-/*TEKSTEN OVER DE WOODY'S*/
-/*///////////////////////*/
-
-
-
-
-
-
-
-p {
-    font-family: 'ToyStory';
-    color: black;
-    font-size: 0.8em;
-    font-weight: 900;
-    text-transform: uppercase;
 }
