@@ -1787,7 +1787,8 @@ button {
 
 /*Buttons aan de rechterkant laten uitlijnen*/
 body > main > ol.buttonsrechts {
-    right: 7.5%;
+    right: 10%;
+    padding:3em;
 }
 
 /*Geen vies randje om de buttons ;)*/
