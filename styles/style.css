@@ -1780,9 +1780,9 @@ body > main > ol {
 
 /*Geen achtergrond bij de buttons*/
 button {
-    width: 0%;
+    width: 100%;
 
-/*    background-color: rgba(0, 0, 0, 0);*/
+    background-color: rgba(0, 0, 0, 0);
     border: 0;
 }
 
