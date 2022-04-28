@@ -207,6 +207,9 @@ Mijn startniveau is: rood
   
   Het was even zoeken naar een leuk idee, maar toen ik het eenmaal in m’n hoofd had heb ik het ook zo kunnen realiseren. Dat vond ik erg goed gegaan. Ook het maken van de andere karakters (aliën, aardappelhoofd en de hond) ging best snel. De tip om eerst te kijken welke vormen erin zitten heeft hierbij erg geholpen.
   
+  <img src="readme-images/elementenWoody.jpg" width="375px" alt="Alle_elementen_Woody">
+  <img src="readme-images/elementenKarakters.jpg" width="375px" alt="Alle_elementen_karakters">
+  
   Ik vond het ook leuk dat we elke dag een stukje theorie kregen. Dit was opfrissing, maar ook daar heb ik veel van geleerd. Zo weet ik nu hoe ik een font kan inladen, custom propperties kan gebruiken zoals var(—) en hoe kleuren eigenlijk in elkaar zitten. Dit vond ik erg leerzaam.
 
   
