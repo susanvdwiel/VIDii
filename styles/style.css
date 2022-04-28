@@ -1,4 +1,3 @@
-/* CSS Document */
 *,
 *::after,
 *::before {
@@ -17,10 +16,24 @@ button:not([disabled]) {
     cursor: pointer;
 }
 
+
+
+/*////////////*/
+/*FONT OPHALEN*/
+/*////////////*/
+@font-face {
+    font-family: 'ToyStory';
+    src: url('../fonts/peace_sans_webfont-webfont.woff2') format('woff2'),
+        url('../fonts/peace_sans_webfont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 /*////////////*/
 /*KLEURENPALET*/
 /*////////////*/
-
 :root {
     --wolk: #EFEFEF;
     --leder-woody: #9F5223;
@@ -31,13 +44,15 @@ button:not([disabled]) {
     --shirt: #EACA44;
     --strepen-shirt: #CB932F;
     --grijper: #5B5B5B;
-    --buttons: #C94737;
+    --pijl: #CA2029;
 }
 
+
+
 /*Logo in het midden van het scherm*/
+/*Position:fixed zodat het logo altijd op dezelfde plek blijft staan. Ook wanneer er aan de pagina wordt getrokken.*/
 body > header > a > img {
     position: fixed;
-    display: block;
     width: 7em;
     left: calc(50% - 3.5em);
     top: 2em;
@@ -46,12 +61,17 @@ body > header > a > img {
 
 
 
-/*///////////*/
-/*GORDIJNTJES*/
-/*///////////*/
+/*///////////////////////////////////////////*/
+/*BINNENKOMST-PAGINA MET GORDIJNTJES EN QUOTE*/
+/*///////////////////////////////////////////*/
+
+
+/*////////////////////*/
+/*BINNENKOMST > TITELS*/
+/*////////////////////*/
+/*Titel van Woody bij binnenkomst met animatie*/
 body > article.tekst > section.tekst_woody > img {
-    position: fixed;
-    display: block;
+    position: absolute;
     width: 50%;
     left: 25%;
     top: calc(50% - 6em);
@@ -74,9 +94,9 @@ body > article.tekst > section.tekst_woody > img {
     }
 }
 
+/*Quote "you got a friend in me" bij binnenkomst met animatie*/
 body > article.tekst > section.quote_woody > img {
     position: fixed;
-    display: block;
     width: 45em;
     left: calc(50% - 22.5em);
     top: calc(50% + 3em);
@@ -99,12 +119,97 @@ body > article.tekst > section.quote_woody > img {
     }
 }
 
+
+
+/*/////////////////////////*/
+/*BINNENKOMST > HET PIJLTJE*/
+/*/////////////////////////*/
+body > article.pijlbinnenkomst > section.pijltje {
+    position: absolute;
+    width: 0.5em;
+    height: 5em;
+    left: calc(50% - 4em);
+    top: 10em;
+    opacity: 0;
+
+    transform: rotate(20deg) scale(0.5);
+
+    background-color: var(--pijl);
+    border-radius: 2em;
+
+    animation-name: pijltje;
+    animation-duration: 2s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes pijltje {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body > article.pijlbinnenkomst > section.pijltje > section.driehoek {
+    position: absolute;
+    left: calc(50% - 3.125em);
+    top: -3em;
+
+    transform: scale(0.35);
+
+    border-left: 3.125em solid transparent;
+    border-right: 3.125em solid transparent;
+    border-bottom: 6.25em solid var(--pijl);
+}
+
+body > article.pijlbinnenkomst > p {
+    position: absolute;
+    left: calc(50% - 9.5em);
+    top: 17em;
+    opacity: 0;
+
+    transform: rotate(20deg);
+
+    font-family: 'ToyStory';
+    color: black;
+    font-size: 0.8em;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    animation-name: pijltje_tekst;
+    animation-duration: 2s;
+    animation-delay: 4.75s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes pijltje_tekst {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/*/////////////////////////*/
+/*BINNENKOMST > GORDIJNTJES*/
+/*/////////////////////////*/
+/*Bruin gordijntje met animatie*/
 body > article > section.bruineachtergrond {
     position: fixed;
-    background-color: #9F5223;
     height: 100vh;
     width: 50vw;
     z-index: 10;
+
+    background-color: #9F5223;
 
     animation-name: achtergrondnaarlinks;
     animation-duration: 5s;
@@ -123,13 +228,15 @@ body > article > section.bruineachtergrond {
     }
 }
 
+/*Geel gordijntje met animatie*/
 body > article > section.geleachtergrond {
     position: fixed;
-    background-color: #EACA44;
     height: 100vh;
     width: 50vw;
     left: 50%;
     z-index: 10;
+
+    background-color: #EACA44;
 
     animation-name: achtergrondnaarrechts;
     animation-duration: 5s;
@@ -150,15 +257,24 @@ body > article > section.geleachtergrond {
 
 
 
-/*///////////////////*/
-/*WOLKJES ACHTERGROND*/
-/*///////////////////*/
+/*////////////////////////////*/
+/*WOLKJES ACHTERGROND > WOLK 1*/
+/*////////////////////////////*/
+body > article > section.wolkenachtergrond > div.wolk1 {
+    position: absolute;
+    left: calc(10% + 3em);
+    top: calc(5% + 3em);
+    width: 8em;
+    height: 4.5em;
+}
+
 body > article > section.wolkenachtergrond > div.wolk1 > div.cirkel1 {
     position: absolute;
     width: 8em;
     height: 1.2em;
-    left: calc(25% + 2em);
-    top: calc(25% + 1em);
+    left: 0;
+    bottom: 0;
+
     background-color: var(--wolk);
     border-radius: 3em 2.5em 2.5em 3em;
 }
@@ -167,32 +283,30 @@ body > article > section.wolkenachtergrond > div.wolk1 > div.cirkel2 {
     position: absolute;
     width: 4.5em;
     height: 2em;
-    left: calc(25% + 3.5em);
-    top: calc(25% - 0.1em);
+    left: 1.5em;
+
+    bottom: 0.1em;
     background-color: var(--wolk);
-    border-radius: 3em 2.5em 2.5em 3em;
 }
 
 body > article > section.wolkenachtergrond > div.wolk1 > div.cirkel3 {
     position: absolute;
     width: 4.5em;
     height: 3em;
-    left: calc(25% + 3.5em);
-    top: calc(25% - 2em);
+    left: 1.5em;
+    bottom: 1.5em;
+
     background-color: var(--wolk);
     border-radius: 50%;
-}
-
-body > article > section.wolkenachtergrond > div.wolk1 > div.cirkel3:hover {
-    transform: scale(2);
 }
 
 body > article > section.wolkenachtergrond > div.wolk1 > div.cirkel4 {
     position: absolute;
     width: 1.4em;
     height: 1.4em;
-    left: calc(25% + 2.8em);
-    top: calc(25% - 0.2em);
+    left: .8em;
+    bottom: 1em;
+
     background-color: var(--wolk);
     border-radius: 50%;
 }
@@ -201,24 +315,189 @@ body > article > section.wolkenachtergrond > div.wolk1 > div.cirkel5 {
     position: absolute;
     width: 2.2em;
     height: 2em;
-    left: calc(25% + 7em);
-    top: calc(25% - .2em);
+    left: 5em;
+    bottom: .6em;
+
     background-color: var(--wolk);
     border-radius: 50%;
 }
 
+
+
+/*////////*/
+/*DE ALIËN*/
+/*////////*/
+/*Hoverstate op wolk1 waarbij de aliën tevoorschijn komt met een animatie*/
+body > article > section.wolkenachtergrond > div.wolk1 div:hover ~ section.alienpoppetje {
+    position: absolute;
+    left: calc(50% + 45em);
+    top: calc(50% + -7.5em);
+
+    animation-name: alien;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes alien {
+    0% {
+        transform: translateY(-5em) scale(0.6) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(7em) scale(0.6) rotate(180deg);
+    }
+}
+
+/*Een kleurverloopje op het lichaam van de aliën*/
+body > article > section.wolkenachtergrond > div.wolk1 div:hover ~ section.alienpoppetje > section.lichaam {
+    position: absolute;
+    width: 9em;
+    height: 8em;
+    left: calc(50% - 4.5em);
+    top: calc(50% + 0.5em);
+
+    border-radius: 0em 0em 2em 2em;
+    background-image:
+        linear-gradient(to bottom,
+            #4EABC6 0%,
+            #4EABC6 20%,
+            #5A554F 20%,
+            #5A554F 25%,
+            #4EABC6 25%,
+            #4EABC6 60%,
+            #2780AC 60%,
+            #2780AC 70%,
+            #4EABC6 70%,
+            #4EABC6 100%);
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 div:hover ~ section.alienpoppetje > section.hoofd {
+    position: absolute;
+    width: 11em;
+    height: 8em;
+    left: calc(50% - 5.5em);
+    top: calc(50% - 4.5em);
+    z-index: 2;
+
+    border-radius: 50%;
+    background-color: #B2C81D;
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 div:hover ~ section.alienpoppetje > section.mond {
+    position: absolute;
+    width: 7em;
+    height: 0.2em;
+    left: calc(50% - 3.5em);
+    top: calc(50% + 1em);
+    z-index: 2;
+
+    border-radius: 0.5em;
+    background-color: #5A554F;
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 div:hover ~ section.alienpoppetje > section.binnenkant {
+    position: absolute;
+    width: 2em;
+    height: 1em;
+    left: calc(50% - 1em);
+    top: calc(50% - .5em);
+
+    border-radius: 50%;
+    background-color: #5A554F;
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 div:hover ~ section.alienpoppetje > section.oorlinks {
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: calc(50% - 6.5em);
+    top: calc(50% - 5em);
+
+    transform: rotate(-5deg);
+
+    border-left: 1.5em solid transparent;
+    border-right: 1.1em solid transparent;
+    border-bottom: 4em solid #B2C81D;
+}
+
+
+body > article > section.wolkenachtergrond > div.wolk1 div:hover ~ section.alienpoppetje > section.oorrechts {
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: calc(50% - 6.5em);
+    top: calc(50% - 5em);
+
+    transform: rotate(5deg);
+
+    border-left: 1.5em solid transparent;
+    border-right: 1.1em solid transparent;
+    border-bottom: 4em solid #B2C81D;
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 div:hover ~ section.alienpoppetje > section.antene {
+    position: absolute;
+    width: 0.5em;
+    height: 4em;
+    left: calc(50% - 0.25em);
+    top: calc(50% - 7.5em);
+
+    background-color: #B2C81D;
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 div:hover ~ section.alienpoppetje > section.antene > section.stipje {
+    position: absolute;
+    width: 1.2em;
+    height: 1.2em;
+    left: calc(50% - 0.6em);
+    top: calc(50% - 2.5em);
+
+    border-radius: 50%;
+    background-color: #B2C81D;
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 div:hover ~ section.alienpoppetje > section.benenlinks {
+    position: absolute;
+    width: 2.5em;
+    height: 1.7em;
+    left: calc(50% - 3em);
+    top: calc(50% + 8.5em);
+
+    background-color: #2780AC;
+    border-radius: 0em 0em 0.5em 0.5em;
+}
+
+body > article > section.wolkenachtergrond > div.wolk1 div:hover ~ section.alienpoppetje > section.benenrechts {
+    position: absolute;
+    width: 2.5em;
+    height: 1.7em;
+    right: calc(50% - 3em);
+    top: calc(50% + 8.5em);
+
+    background-color: #2780AC;
+    border-radius: 0em 0em 0.5em 0.5em;
+}
+
+/*////////////////////////////*/
+/*WOLKJES ACHTERGROND > WOLK 2*/
+/*////////////////////////////*/
 body > article > section.wolkenachtergrond > div.wolk2 {
     position: absolute;
-    top: calc(50% + 3em);
-    left: calc(50% + 10em);
+    left: calc(25% + 2em);
+    top: calc(75% + 4em);
+    width: 8em;
+    height: 4.5em;
 }
 
 body > article > section.wolkenachtergrond > div.wolk2 > div.cirkel1 {
     position: absolute;
     width: 8em;
     height: 1.2em;
-    left: calc(25% + 2em);
-    top: calc(25% + 1em);
+    left: 0;
+    bottom: 0;
+
     background-color: var(--wolk);
     border-radius: 3em 2.5em 2.5em 3em;
 }
@@ -227,18 +506,19 @@ body > article > section.wolkenachtergrond > div.wolk2 > div.cirkel2 {
     position: absolute;
     width: 4.5em;
     height: 2em;
-    left: calc(25% + 3.5em);
-    top: calc(25% - 0.1em);
+    left: 1.5em;
+    bottom: 0.1em;
+
     background-color: var(--wolk);
-    border-radius: 3em 2.5em 2.5em 3em;
 }
 
 body > article > section.wolkenachtergrond > div.wolk2 > div.cirkel3 {
     position: absolute;
     width: 4.5em;
     height: 3em;
-    left: calc(25% + 3.5em);
-    top: calc(25% - 2em);
+    left: 1.5em;
+    bottom: 1.5em;
+
     background-color: var(--wolk);
     border-radius: 50%;
 }
@@ -247,8 +527,9 @@ body > article > section.wolkenachtergrond > div.wolk2 > div.cirkel4 {
     position: absolute;
     width: 1.4em;
     height: 1.4em;
-    left: calc(25% + 2.8em);
-    top: calc(25% - 0.2em);
+    left: .8em;
+    bottom: 1em;
+
     background-color: var(--wolk);
     border-radius: 50%;
 }
@@ -257,8 +538,619 @@ body > article > section.wolkenachtergrond > div.wolk2 > div.cirkel5 {
     position: absolute;
     width: 2.2em;
     height: 2em;
-    left: calc(25% + 7em);
-    top: calc(25% - .2em);
+    left: 5em;
+    bottom: .6em;
+
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+
+
+/*//////////////*/
+/*AARDAPPELHOOFD*/
+/*//////////////*/
+/*Hoverstate op wolk2 waarbij aardappelhoofd tevoorschijn komt met een animatie*/
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje {
+    position: absolute;
+    left: calc(50% - 15em);
+    top: calc(50% - 1em);
+
+    animation-name: aardappel;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aardappel {
+    0% {
+        transform: translateY(10em) scale(0.8);
+    }
+
+    100% {
+        transform: translateY(-4.5em) scale(0.8);
+    }
+}
+
+/*Border-radius om een ei vorm te krijgen*/
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje > section.lichaam {
+    position: absolute;
+    width: 8em;
+    height: 12em;
+    left: calc(50% - 4em);
+    top: calc(50% - 1em);
+    z-index: 1;
+
+    background-color: #FA940B;
+    border-radius: 50% 50% 50% 50% / 70% 70% 40% 40%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje > section.hoed {
+    position: absolute;
+    width: 7em;
+    height: 9em;
+    left: calc(50% - 3.5em);
+    top: calc(50% - 3em);
+    z-index: 2;
+
+    border-radius: 50%;
+    background-image: linear-gradient(#010101 45%, transparent 45%);
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje > section.onderkanthoed {
+    position: absolute;
+    width: 8.5em;
+    height: 1.5em;
+    left: calc(50% - 4.25em);
+    top: calc(50% + 0.5em);
+    z-index: 1;
+
+    background-color: #010101;
+    border-radius: 50%;
+}
+
+/*Background-image om een halve cirkel te krijgen*/
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje > section.oorlinks {
+    position: absolute;
+    width: 3.8em;
+    height: 3em;
+    left: calc(50% - 5.1em);
+    top: calc(50% + 2em);
+
+    border-radius: 50%;
+    background-image:
+        linear-gradient(to right,
+            #FF88A7 0%,
+            #FF88A7 50%,
+            transparent 50%,
+            transparent 100%);
+}
+
+/*Background-image om een halve cirkel te krijgen*/
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje > section.oorrechts {
+    position: absolute;
+    width: 3.8em;
+    height: 3em;
+    right: calc(50% - 5.1em);
+    top: calc(50% + 2em);
+
+    border-radius: 50%;
+    background-image:
+        linear-gradient(to right,
+            transparent 0%,
+            transparent 50%,
+            #FF88A7 50%,
+            #FF88A7 100%);
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje > section.neus {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    left: calc(50% - .75em);
+    top: calc(50% + 3.5em);
+    z-index: 3;
+
+    background-color: #FA3F00;
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje > section.neusonderkant {
+    position: absolute;
+    width: 3.3em;
+    height: 2.25em;
+    left: calc(50% - 1.65em);
+    top: calc(50% + 4.25em);
+    z-index: 3;
+
+    background-color: #FA3F00;
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje > section.snorlinks {
+    position: absolute;
+    width: 4em;
+    height: 2em;
+    left: calc(50% - 3.5em);
+    top: calc(50% + 5.5em);
+    z-index: 2;
+
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje > section.snorrechts {
+    position: absolute;
+    width: 4em;
+    height: 2em;
+    right: calc(50% - 3.5em);
+    top: calc(50% + 5.5em);
+    z-index: 2;
+
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje > section.mond {
+    position: absolute;
+    width: 3em;
+    height: 2.75em;
+    left: calc(50% - 1.5em);
+    top: calc(50% + 6em);
+    z-index: 1;
+
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+/*Background-image om een halve cirkel te krijgen*/
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje > section.voetlinks {
+    position: absolute;
+    width: 3em;
+    height: 5em;
+    left: calc(50% - 3.2em);
+    top: calc(50% + 10em);
+    z-index: 2;
+
+    border-radius: 1.25em 1.25em 0 0;
+    background-image: linear-gradient(to bottom,
+            #008AD8 45%,
+            transparent 45%);
+}
+
+/*Background-image om een halve cirkel te krijgen*/
+body > article > section.wolkenachtergrond > div.wolk2 div:hover ~ section.aardappelpoppetje > section.voetrechts {
+    position: absolute;
+    width: 3em;
+    height: 5em;
+    right: calc(50% - 3.2em);
+    top: calc(50% + 10em);
+    z-index: 2;
+
+    border-radius: 1.25em 1.25em 0 0;
+    background-image: linear-gradient(to bottom,
+            #008AD8 45%,
+            transparent 45%);
+}
+
+
+
+/*////////////////////////////*/
+/*WOLKJES ACHTERGROND > WOLK 3*/
+/*////////////////////////////*/
+body > article > section.wolkenachtergrond > div.wolk3 {
+    position: absolute;
+    left: calc(25% + 40em);
+    top: calc(25% + 10em);
+    width: 8em;
+    height: 4.5em;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 > div.cirkel1 {
+    position: absolute;
+    width: 8em;
+    height: 1.2em;
+    left: 0;
+    bottom: 0;
+
+    background-color: var(--wolk);
+    border-radius: 3em 2.5em 2.5em 3em;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 > div.cirkel2 {
+    position: absolute;
+    width: 4.5em;
+    height: 2em;
+    left: 1.5em;
+    bottom: 0.1em;
+
+    background-color: var(--wolk);
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 > div.cirkel3 {
+    position: absolute;
+    width: 4.5em;
+    height: 3em;
+    left: 1.5em;
+    bottom: 1.5em;
+
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 > div.cirkel4 {
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    left: .8em;
+    bottom: 1em;
+
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 > div.cirkel5 {
+    position: absolute;
+    width: 2.2em;
+    height: 2em;
+    left: 5em;
+    bottom: .6em;
+
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+
+
+/*///////*/
+/*DE HOND*/
+/*///////*/
+/*Hoverstate op wolk3 waarbij de hond tevoorschijn komt met een animatie*/
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje {
+    position: absolute;
+    right: calc(25% - 12em);
+    top: calc(50% - 7.5em);
+    z-index: 300;
+
+    transform: scale(0.8) rotate(270deg);
+
+    animation-name: hond;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hond {
+    0% {
+        transform: translateX(9.5em) scale(0.8) rotate(270deg);
+    }
+
+    100% {
+        transform: translateX(-4.5em) scale(0.8) rotate(270deg);
+    }
+}
+
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.hoofd {
+    position: absolute;
+    width: 8em;
+    height: 8em;
+    left: calc(50% - 4em);
+    top: calc(50% + 1em);
+
+    background-color: #F39613;
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.nek {
+    position: absolute;
+    width: 4em;
+    height: 0.75em;
+    left: calc(50% - 2em);
+    top: calc(50% + 8.75em);
+    z-index: 3;
+
+    background-color: #6B5200;
+    border-radius: 0.2em;
+}
+
+/*Background-image om een halve cirkel te krijgen*/
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.lichaam {
+    position: absolute;
+    width: 10em;
+    height: 9em;
+    left: calc(50% - 5em);
+    top: calc(50% + 9.25em);
+    z-index: 1;
+
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom,
+            #F39613 45%,
+            transparent 45%);
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.mond {
+    position: absolute;
+    width: 5.5em;
+    height: 2.5em;
+    left: calc(50% - 2.75em);
+    top: calc(50% + 5.75em);
+    z-index: 1;
+
+    border-radius: 50%;
+    background-color: #FFDE6E;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.neus {
+    position: absolute;
+    width: 2.2em;
+    height: 1em;
+    left: calc(50% - 1.1em);
+    top: calc(50% + 6em);
+    z-index: 1;
+
+    border-radius: 50%;
+    background-color: #2C141E;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.oorlinks {
+    position: absolute;
+    width: 2em;
+    height: 0.75em;
+    left: calc(50% - 4.5em);
+    top: calc(50% + 1.5em);
+    z-index: 1;
+
+    transform: rotate(20deg);
+
+    border-radius: 50%;
+    background-color: #4D2214;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.oorlinks > section.binnenste {
+    position: absolute;
+    top: calc(50% - 0.1em);
+    left: 0.65em;
+
+    transform: rotate(167deg);
+
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 170px solid #4D2214;
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.oorlinks > section.extra {
+    position: absolute;
+    width: 0.75em;
+    height: 5em;
+    top: calc(50% - 0.3em);
+    left: 0.5em;
+
+    transform: rotate(167deg);
+
+    border-radius: 2em;
+    background-color: #4D2214;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.oorrechts {
+    position: absolute;
+    width: 2em;
+    height: 0.75em;
+    right: calc(50% - 4.5em);
+    top: calc(50% + 1.5em);
+    z-index: 1;
+
+    transform: rotate(-20deg);
+
+    border-radius: 50%;
+    background-color: #4D2214;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.oorrechts > section.binnenste {
+    position: absolute;
+    top: calc(50% - 0.1em);
+    right: 0.65em;
+
+    transform: rotate(-167deg);
+
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 170px solid #4D2214;
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.oorrechts > section.extra {
+    position: absolute;
+    width: 0.75em;
+    height: 5em;
+    top: calc(50% - 0.3em);
+    right: 0.5em;
+
+    transform: rotate(-167deg);
+
+    border-radius: 2em;
+    background-color: #4D2214;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.pootlinks {
+    position: absolute;
+    width: 1.25em;
+    height: 2.5em;
+    left: calc(50% - 4em);
+    top: calc(50% + 12.5em);
+    z-index: 1;
+
+    background-color: #F39613;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.pootlinks > section.voet {
+    position: absolute;
+    width: 1.75em;
+    height: 1.25em;
+    left: calc(50% - .875em);
+    top: calc(50% + 0.8em);
+    z-index: 1;
+
+    background-color: #FFDE6E;
+    border-radius: 0.2em;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.pootrechts {
+    position: absolute;
+    width: 1.25em;
+    height: 2.5em;
+    right: calc(50% - 4em);
+    top: calc(50% + 12.5em);
+    z-index: 1;
+
+    background-color: #F39613;
+}
+
+body > article > section.wolkenachtergrond > div.wolk3 div:hover ~ section.hondpoppetje > section.pootrechts > section.voet {
+    position: absolute;
+    width: 1.75em;
+    height: 1.25em;
+    right: calc(50% - .875em);
+    top: calc(50% + 0.8em);
+    z-index: 1;
+
+    background-color: #FFDE6E;
+    border-radius: 0.2em;
+}
+
+
+
+/*////////////////////////////*/
+/*WOLKJES ACHTERGROND > WOLK 4*/
+/*////////////////////////////*/
+body > article > section.wolkenachtergrond > div.wolk4 {
+    position: absolute;
+    left: calc(90% + 5em);
+    top: calc(1% - 2em);
+    width: 8em;
+    height: 4.5em;
+}
+
+body > article > section.wolkenachtergrond > div.wolk4 > div.cirkel1 {
+    position: absolute;
+    width: 8em;
+    height: 1.2em;
+    left: 0;
+    bottom: 0;
+
+    background-color: var(--wolk);
+    border-radius: 3em 2.5em 2.5em 3em;
+}
+
+body > article > section.wolkenachtergrond > div.wolk4 > div.cirkel2 {
+    position: absolute;
+    width: 4.5em;
+    height: 2em;
+    left: 1.5em;
+    bottom: 0.1em;
+
+    background-color: var(--wolk);
+}
+
+body > article > section.wolkenachtergrond > div.wolk4 > div.cirkel3 {
+    position: absolute;
+    width: 4.5em;
+    height: 3em;
+    left: 1.5em;
+    bottom: 1.5em;
+
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk4 > div.cirkel4 {
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    left: .8em;
+    bottom: 1em;
+
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk4 > div.cirkel5 {
+    position: absolute;
+    width: 2.2em;
+    height: 2em;
+    left: 5em;
+    bottom: .6em;
+
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+
+
+/*////////////////////////////*/
+/*WOLKJES ACHTERGROND > WOLK 5*/
+/*////////////////////////////*/
+body > article > section.wolkenachtergrond > div.wolk5 {
+    position: absolute;
+    left: calc(1% - 6em);
+    top: calc(50% + 6em);
+    width: 8em;
+    height: 4.5em;
+}
+
+body > article > section.wolkenachtergrond > div.wolk5 > div.cirkel1 {
+    position: absolute;
+    width: 8em;
+    height: 1.2em;
+    left: 0;
+    bottom: 0;
+
+    background-color: var(--wolk);
+    border-radius: 3em 2.5em 2.5em 3em;
+}
+
+body > article > section.wolkenachtergrond > div.wolk5 > div.cirkel2 {
+    position: absolute;
+    width: 4.5em;
+    height: 2em;
+    left: 1.5em;
+    bottom: 0.1em;
+
+    background-color: var(--wolk);
+}
+
+body > article > section.wolkenachtergrond > div.wolk5 > div.cirkel3 {
+    position: absolute;
+    width: 4.5em;
+    height: 3em;
+    left: 1.5em;
+    bottom: 1.5em;
+
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk5 > div.cirkel4 {
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    left: .8em;
+    bottom: 1em;
+
+    background-color: var(--wolk);
+    border-radius: 50%;
+}
+
+body > article > section.wolkenachtergrond > div.wolk5 > div.cirkel5 {
+    position: absolute;
+    width: 2.2em;
+    height: 2em;
+    left: 5em;
+    bottom: .6em;
+
     background-color: var(--wolk);
     border-radius: 50%;
 }
@@ -267,18 +1159,20 @@ body > article > section.wolkenachtergrond > div.wolk2 > div.cirkel5 {
 
 
 
-
-
-
+/*///////////////////////////////////*/
+/*INDEX-PAGINA MET WOODY'S EN GRIJPER*/
+/*///////////////////////////////////*/
 
 /*//////////////////*/
 /*STIJLING VAN WOODY*/
 /*//////////////////*/
+/*Zelf gemaakte Woody met een animatie waarbij hij vervaagd*/
 body > main > article.woody {
     position: relative;
     top: 55vh;
-    transform: scale(0.9);
     z-index: 10;
+
+    transform: scale(0.9);
 
     animation-name: woodygrijperbutton;
     animation-duration: 3.5s;
@@ -296,10 +1190,11 @@ body > main > article.woody {
     }
 }
 
+/*Woody komt eerst vervaagd op de pagina, maar om hem weer te laten verdwijnen is er een nieuwe animatie*/
 body > main > article.woody > section.woodypoppetje {
     animation-name: verdwijnen;
-    animation-duration: 3s;
-    animation-delay: 3.5s;
+    animation-duration: 2s;
+    animation-delay: 4s;
     animation-fill-mode: forwards;
 }
 
@@ -313,12 +1208,14 @@ body > main > article.woody > section.woodypoppetje {
     }
 }
 
+/*Background-image om een ruitpatroon te krijgen op Woody zijn shirt*/
 body > main > article.woody > section.woodypoppetje > section.lichaam {
     position: absolute;
     width: 9em;
     height: 10.7em;
     left: calc(50% - 4.5em);
     top: calc(50% + 0.5em);
+
     border-radius: 2em 2em 0.5em 0.5em;
     background-color: var(--shirt);
     background-image:
@@ -376,6 +1273,7 @@ body > main > article.woody > section.woodypoppetje > section.hoofd {
     top: calc(50% - 8em);
     width: 8em;
     height: 9em;
+
     background-color: #F3E3C8;
     border-radius: 2em;
 }
@@ -384,12 +1282,13 @@ body > main > article.woody > section.woodypoppetje > section.hoed {
     position: absolute;
     left: calc(50% - 4.5em);
     top: calc(50% - 10.8em);
+    width: 9em;
+    z-index: 2;
+
     border-bottom: 4.5em solid var(--leder-woody);
     border-left: 1em solid transparent;
     border-right: 1em solid transparent;
-    width: 9em;
     border-radius: 3em 3em 0.2em 0.2em;
-    z-index: 2;
 }
 
 body > main > article.woody > section.woodypoppetje > section.onderkant_hoed {
@@ -398,9 +1297,10 @@ body > main > article.woody > section.woodypoppetje > section.onderkant_hoed {
     top: calc(50% - 6.7em);
     width: 9em;
     height: 1.5em;
+    z-index: 2;
+
     background-color: var(--leder-woody);
     border-radius: 50%;
-    z-index: 2;
 }
 
 body > main > article.woody > section.woodypoppetje > section.onderkant_hoed > div.hoed_links {
@@ -409,10 +1309,12 @@ body > main > article.woody > section.woodypoppetje > section.onderkant_hoed > d
     top: calc(50% - 0.9em);
     width: 3em;
     height: 0.9em;
+    z-index: 1;
+
+    transform: rotate(15deg);
+
     background-color: var(--leder-woody);
     border-radius: 0.1em 0 0 0.5em;
-    transform: rotate(15deg);
-    z-index: 1;
 }
 
 body > main > article.woody > section.woodypoppetje > section.onderkant_hoed > div.hoed_rechts {
@@ -421,23 +1323,27 @@ body > main > article.woody > section.woodypoppetje > section.onderkant_hoed > d
     top: calc(50% - 0.9em);
     width: 3em;
     height: 0.9em;
+    z-index: 1;
+
+    transform: rotate(-15deg);
+
     background-color: var(--leder-woody);
     border-radius: 0 0.1em 0.5em 0;
-    transform: rotate(-15deg);
-    z-index: 1;
 }
 
 body > main > article.woody > section.woodypoppetje > section.bakkenbaard_links {
     position: absolute;
-    border-bottom: 20px solid var(--haren);
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
     width: 110px;
     left: calc(50% - 7em);
     top: calc(50% - 5.5em);
-    transform: rotate(270deg) scale(0.7);
-    border-radius: 1em;
     z-index: 1;
+
+    transform: rotate(270deg) scale(0.7);
+
+    border-bottom: 20px solid var(--haren);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-radius: 1em;
 }
 
 body > main > article.woody > section.woodypoppetje > section.bakkenbaard_links > div.bovenkant {
@@ -446,6 +1352,7 @@ body > main > article.woody > section.woodypoppetje > section.bakkenbaard_links 
     height: 0.7em;
     left: calc(50% - 4.5em);
     top: calc(50% + 0.9em);
+
     border-radius: 0.3em;
     background-color: var(--haren);
 }
@@ -456,22 +1363,26 @@ body > main > article.woody > section.woodypoppetje > section.bakkenbaard_links 
     height: 1.3em;
     left: calc(50% - 2.3em);
     top: calc(50% + 0.9em);
-    border-radius: 50%;
+
     transform: rotate(10deg);
+
+    border-radius: 50%;
     background-color: var(--haren);
 }
 
 body > main > article.woody > section.woodypoppetje > section.bakkenbaard_rechts {
     position: absolute;
-    border-bottom: 20px solid var(--haren);
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
     width: 110px;
     right: calc(50% - 7em);
     top: calc(50% - 5.5em);
-    transform: rotate(90deg) scale(0.7);
-    border-radius: 1em;
     z-index: 1;
+
+    transform: rotate(90deg) scale(0.7);
+
+    border-bottom: 20px solid var(--haren);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-radius: 1em;
 }
 
 body > main > article.woody > section.woodypoppetje > section.bakkenbaard_rechts > div.bovenkant {
@@ -480,6 +1391,7 @@ body > main > article.woody > section.woodypoppetje > section.bakkenbaard_rechts
     height: 0.7em;
     right: calc(50% - 4.5em);
     top: calc(50% + 0.9em);
+
     border-radius: 0.3em;
     background-color: var(--haren);
 }
@@ -490,8 +1402,10 @@ body > main > article.woody > section.woodypoppetje > section.bakkenbaard_rechts
     height: 1.3em;
     right: calc(50% - 2.3em);
     top: calc(50% + 0.9em);
-    border-radius: 50%;
+
     transform: rotate(-10deg);
+
+    border-radius: 50%;
     background-color: var(--haren);
 }
 
@@ -502,9 +1416,10 @@ body > main > article.woody > section.woodypoppetje > section.sjaal {
     top: calc(50% + 0.4em);
     width: 8em;
     height: 1.2em;
+    z-index: 1;
+
     background-color: var(--sjaal);
     border-radius: 50%;
-    z-index: 1;
 }
 
 body > main > article.woody > section.woodypoppetje > section.sjaal > .puntje_sjaal {
@@ -513,112 +1428,125 @@ body > main > article.woody > section.woodypoppetje > section.sjaal > .puntje_sj
     top: calc(50% - 1.3em);
     width: 3em;
     height: 0.9em;
+    z-index: 1;
+
+    transform: rotate(40deg);
+
     background-color: var(--sjaal);
     border-radius: 50%;
-    transform: rotate(40deg);
-    z-index: 1;
 }
 
 body > main > article.woody > section.woodypoppetje > .gilet_links {
     position: absolute;
     width: 1.8em;
     height: 7em;
-    background-color: white;
-    border-radius: 0 0em 2em 0;
     right: calc(50% + 1.4em);
     top: calc(50% + 1em);
+
+    background-color: #FFFFFF;
+    border-radius: 0 0em 2em 0;
 }
 
 body > main > article.woody > section.woodypoppetje > .gilet_links > div.zijkant {
     position: absolute;
     width: 1.5em;
     height: 3.5em;
-    background-color: white;
     right: calc(50% + 0.7em);
     top: calc(50% + .3em);
+
     transform: skewY(-20deg);
+
+    background-color: #FFFFFF;
 }
 
 body > main > article.woody > section.woodypoppetje > .gilet_links > div.koeienvlek1 {
     position: absolute;
     width: 1em;
     height: 1em;
-    border-radius: 50%;
-    background-color: black;
     right: calc(50% - 0.7em);
     top: calc(50% + 0.6em);
+
+    background-color: #000000;
+    border-radius: 50%;
 }
 
 body > main > article.woody > section.woodypoppetje > .gilet_links > div.koeienvlek2 {
     position: absolute;
     width: 1em;
     height: 1em;
-    border-radius: 50%;
-    background-color: black;
     right: calc(50% - 0.5em);
     top: calc(50% - 1.8em);
+
+    background-color: #000000;
+    border-radius: 50%;
 }
 
 body > main > article.woody > section.woodypoppetje > .gilet_links > div.koeienvlek3 {
     position: absolute;
     width: 1em;
     height: 1em;
-    border-radius: 50%;
-    background-color: black;
     right: calc(50% + 0.9em);
     top: calc(50% + 1.9em);
+
+    background-color: #000000;
+    border-radius: 50%;
 }
 
 body > main > article.woody > section.woodypoppetje > .gilet_rechts {
     position: absolute;
     width: 1.8em;
     height: 7em;
-    background-color: white;
-    border-radius: 0 0em 0em 2em;
     left: calc(50% + 1.4em);
     top: calc(50% + 1em);
+
+    background-color: #FFFFFF;
+    border-radius: 0 0em 0em 2em;
 }
 
 body > main > article.woody > section.woodypoppetje > .gilet_rechts > div.koeienvlek1 {
     position: absolute;
     width: 1em;
     height: 1em;
-    border-radius: 50%;
-    background-color: black;
     left: calc(50% - 0.7em);
     top: calc(50% + 0.6em);
+
+    background-color: #000000;
+    border-radius: 50%;
 }
 
 body > main > article.woody > section.woodypoppetje > .gilet_rechts > div.koeienvlek2 {
     position: absolute;
     width: 1em;
     height: 1em;
-    border-radius: 50%;
-    background-color: black;
     left: calc(50% - 0.5em);
     top: calc(50% - 1.8em);
+
+    background-color: #000000;
+    border-radius: 50%;
 }
 
 body > main > article.woody > section.woodypoppetje > .gilet_rechts > div.koeienvlek3 {
     position: absolute;
     width: 1em;
     height: 1em;
-    border-radius: 50%;
-    background-color: black;
     left: calc(50% + 0.9em);
     top: calc(50% + 1.9em);
+
+    background-color: #000000;
+    border-radius: 50%;
 }
 
 body > main > article.woody > section.woodypoppetje > .gilet_rechts > div.zijkant {
     position: absolute;
     width: 1.5em;
     height: 3.5em;
-    background-color: white;
     left: calc(50% + 0.7em);
     top: calc(50% + 0.3em);
-    transform: skewY(20deg);
-}
 
+    transform: skewY(20deg);
+
+    background-color: #FFFFFF;
+}
 
 body > main > article.woody > section.woodypoppetje > section.riem {
     position: absolute;
@@ -626,6 +1554,7 @@ body > main > article.woody > section.woodypoppetje > section.riem {
     top: calc(50% + 11em);
     width: 8.6em;
     height: 2.2em;
+
     background-color: var(--riem-schoen);
     border-radius: 0.4em;
 }
@@ -636,8 +1565,9 @@ body > main > article.woody > section.woodypoppetje > section.broekspijp_links {
     top: calc(50% + 13em);
     width: 2.4em;
     height: 1.5em;
-    background-color: var(--broekspijp);
     z-index: -1;
+
+    background-color: var(--broekspijp);
 }
 
 body > main > article.woody > section.woodypoppetje > section.broekspijp_links > div.sok {
@@ -646,8 +1576,9 @@ body > main > article.woody > section.woodypoppetje > section.broekspijp_links >
     top: calc(50% + 0.6em);
     width: 2.5em;
     height: 1.7em;
-    background-color: var(--riem-schoen);
     z-index: -1;
+
+    background-color: var(--riem-schoen);
 }
 
 body > main > article.woody > section.woodypoppetje > section.broekspijp_links > div.schoen {
@@ -656,9 +1587,10 @@ body > main > article.woody > section.woodypoppetje > section.broekspijp_links >
     top: calc(50% + 2em);
     width: 2.9em;
     height: 1.7em;
+    z-index: -1;
+
     background-color: var(--riem-schoen);
     border-radius: 0.2em;
-    z-index: -1;
 }
 
 body > main > article.woody > section.woodypoppetje > section.broekspijp_rechts {
@@ -667,8 +1599,9 @@ body > main > article.woody > section.woodypoppetje > section.broekspijp_rechts 
     top: calc(50% + 13em);
     width: 2.4em;
     height: 1.5em;
-    background-color: var(--broekspijp);
     z-index: -1;
+
+    background-color: var(--broekspijp);
 }
 
 body > main > article.woody > section.woodypoppetje > section.broekspijp_rechts > div.sok {
@@ -677,8 +1610,9 @@ body > main > article.woody > section.woodypoppetje > section.broekspijp_rechts 
     top: calc(50% + 0.6em);
     width: 2.5em;
     height: 1.7em;
-    background-color: var(--riem-schoen);
     z-index: -1;
+
+    background-color: var(--riem-schoen);
 }
 
 body > main > article.woody > section.woodypoppetje > section.broekspijp_rechts > div.schoen {
@@ -687,9 +1621,10 @@ body > main > article.woody > section.woodypoppetje > section.broekspijp_rechts 
     top: calc(50% + 2em);
     width: 2.9em;
     height: 1.7em;
-    background-color: var(--riem-schoen);
     border-radius: 0.2em;
     z-index: -1;
+
+    background-color: var(--riem-schoen);
 }
 
 
@@ -697,6 +1632,8 @@ body > main > article.woody > section.woodypoppetje > section.broekspijp_rechts 
 /*////////////////*/
 /*STIJLING GRIJPER*/
 /*////////////////*/
+/*Position:fixed om hem in het midden te houden. Ook wanneer er aan de pagina wordt getrokken.*/
+/*Top:-62em om het touw aan de grijper te "verstoppen", dat wanneer er op de grijper wordt geklikt het touw van de grijper wordt laten zien*/
 body > main > article.woody > section.grijper {
     position: fixed;
     left: 50%;
@@ -704,7 +1641,8 @@ body > main > article.woody > section.grijper {
     z-index: -150;
 }
 
-/* Animatie wordt uigevoerd wanneer er op de button wordt geklikt -> de grijper gaat op en neer */
+/* Animatie "grijper bewegen" wordt uitgevoerd wanneer er op de button wordt geklikt -> de grijper gaat op en neer */
+/*De grijper gaat 45vw + 2em naar beneden*/
 .grijper_beweeg {
     animation-name: bewegen;
     animation-duration: 5s;
@@ -722,6 +1660,7 @@ body > main > article.woody > section.grijper {
     }
 }
 
+/*Background-image om het touw effect te krijgen met stukken transparent*/
 body > main > article.woody > section.grijper > section.touw {
     position: absolute;
     width: 0.8em;
@@ -729,6 +1668,7 @@ body > main > article.woody > section.grijper > section.touw {
     left: calc(50% - .4em);
     top: -10em;
     z-index: 50;
+
     border-radius: 0 0 1em 1em;
     background-image: linear-gradient(to bottom,
             var(--grijper) 0%,
@@ -757,50 +1697,58 @@ body > main > article.woody > section.grijper > section.touw {
 
 body > main > article.woody > section.grijper > section.touw > section.knijper_links {
     position: absolute;
-    border-bottom: 20px solid var(--grijper);
-    border-left: 5px solid transparent;
-    border-right: 35px solid transparent;
     width: 160px;
-    transform: rotate(-200deg);
     left: calc(50% - 9.5em);
     top: calc(50% + 27em);
     z-index: 5;
+
+    transform: rotate(-200deg);
+
+    border-bottom: 20px solid var(--grijper);
+    border-left: 5px solid transparent;
+    border-right: 35px solid transparent;
 }
 
 body > main > article.woody > section.grijper > section.touw > section.knijper_onderkantl {
     position: absolute;
-    border-bottom: 150px solid var(--grijper);
-    border-left: 13px solid transparent;
-    border-right: 13px solid transparent;
     width: 40px;
-    transform: rotate(-200deg);
     left: calc(50% - 7.9em);
     top: calc(50% + 28.1em);
     z-index: 5;
+
+    transform: rotate(-200deg);
+
+    border-bottom: 150px solid var(--grijper);
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
 }
 
 body > main > article.woody > section.grijper > section.touw > section.knijper_rechts {
     position: absolute;
-    border-bottom: 20px solid var(--grijper);
-    border-left: 35px solid transparent;
-    border-right: 5px solid transparent;
     width: 160px;
-    transform: rotate(200deg);
     right: calc(50% - 9.5em);
     top: calc(50% + 27em);
     z-index: 5;
+
+    transform: rotate(200deg);
+
+    border-bottom: 20px solid var(--grijper);
+    border-left: 35px solid transparent;
+    border-right: 5px solid transparent;
 }
 
 body > main > article.woody > section.grijper > section.touw > section.knijper_onderkantr {
     position: absolute;
-    border-bottom: 150px solid var(--grijper);
-    border-left: 13px solid transparent;
-    border-right: 13px solid transparent;
     width: 40px;
-    transform: rotate(200deg);
     right: calc(50% - 7.9em);
     top: calc(50% + 28.1em);
     z-index: 5;
+
+    transform: rotate(200deg);
+
+    border-bottom: 150px solid var(--grijper);
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
 }
 
 
@@ -808,17 +1756,21 @@ body > main > article.woody > section.grijper > section.touw > section.knijper_o
 /*////////////////////*/
 /*STIJLING VAN BUTTONS*/
 /*////////////////////*/
+/*Position:fixed om de buttons altijd op hun vaste plek te laten staan*/
+/*Flex-direction:column om de buttons van boven naar beneden te laten gaan*/
+/*Display:flex om de buttons te rangschikken en dat ze meevormen wanneer er aan de pagina wordt getrokken*/
 body > main > ol {
     position: fixed;
-    display: flex;
     top: 0;
     bottom: 0;
-    padding: 3em;
     flex-direction: column;
     gap: 1em;
     justify-content: center;
     list-style: none;
-    z-index: 999;
+    z-index: 200;
+
+    display: flex;
+    padding: 3em;
 
     animation-name: woodygrijperbutton;
     animation-duration: 3.5s;
@@ -826,212 +1778,136 @@ body > main > ol {
     animation-timing-function: ease-out;
 }
 
-body > main > ol.buttonslinks {
-    left: 0;
+/*Geen achtergrond bij de buttons*/
+button {
+    width: 0%;
+
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
 }
 
+/*Buttons aan de rechterkant laten uitlijnen*/
 body > main > ol.buttonsrechts {
     right: 0;
 }
 
-body > main > ol > li > a > img {
-    display: grid;
-    justify-items: center;
+/*Geen vies randje om de buttons ;)*/
+body > main > ol > li > button:focus {
+    outline: none;
+}
+
+/*Grootte van de buttons*/
+body > main > ol > li > button > img {
     width: 10em;
 }
 
 
 
-
-
-
-
-
-
-
-/*
-body > main > article.verschillendewoodys > section > img {
-    display: block;
+/*///////////////////////*/
+/*STIJLING VAN DE WOODY'S*/
+/*///////////////////////*/
+/*Position:fixed om de Woody's altijd op dezelfde plek te laten staan*/
+body > main > article.verschillendewoodys > section {
     position: fixed;
-    width: 32%;
+    width: 20%;
+    left: calc(50% - 9.2em);
+    top: 45em;
 }
 
-body > main > article.verschillendewoodys > section.woodyuit1995 {
+/*Grootte van de Woody's*/
+body > main > article.verschillendewoodys > section > img {
+    width: 100%;
+}
+
+/*De grootte van de Woody uit 1996 aanpassen*/
+body > main > article.verschillendewoodys > section.beweeg1996 > img {
     position: absolute;
-    left: calc(50% - 11.8em);
-    top: 60em;
-    z-index: 200;
-
-    animation-name: woody1995;
-    animation-duration: 5s;
-    animation-delay: 2.5s;
-    animation-timing-function: ease-in;
+    width: 130%;
+    left: -3.5em;
+    top: 1em;
 }
 
-@keyframes woody1995 {
+body > main > article.verschillendewoodys > section.beweeg2013 > img {
+    position: absolute;
+    width: 130%;
+    left: -3em;
+    top: 2em;
+}
+
+body > main > article.verschillendewoodys > section.beweeg2010 > img {
+    position: absolute;
+    width: 140%;
+    left: -7em;
+}
+
+body > main > article.verschillendewoodys > section.beweeg2014 > img {
+    position: absolute;
+    width: 140%;
+    left: -3.5em;
+    top: 1em;
+}
+
+body > main > article.verschillendewoodys > section.beweeg2019 > img {
+    position: absolute;
+    width: 160%;
+    left: -5.5em;
+    top: 1em;
+}
+
+/* Animatie van "ikMag" wordt uitgevoerd wanneer er op de button wordt geklikt -> de grijper gaat op en neer en op de terugweg neemt de grijper een Woody mee*/
+section.ikMag {
+    animation-name: woodyomhoog;
+    animation-duration: 2.5s;
+    animation-delay: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes woodyomhoog {
     0% {
-        
+        transform: translateY(0em);
     }
 
     100% {
-        transform: translatey(calc(50% - 17em));
+        transform: translateY(-34em);
     }
 }
-*/
 
-
-
-
-
-
-
-
-/*////////*/
-/*DE ALIEN*/
-/*////////*/
-body > main > article > section.alienpoppetje {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-
-    animation-name: alien;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
+/* Animatie van "Poef" wordt uitgevoerd wanneer er opnieuw op de button wordt geklikt -> de Woody ontploft en de grijper gaat opnieuw naar beneden om een Woody op te halen*/
+section.poef {
+    animation-name: woodypoef;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 
-@keyframes alien {
-    
+@keyframes woodypoef {
+    0% {
+        transform: translateY(-34em);
+    }
+
+    100% {
+        transform: translateY(-34em) scale(4);
+        opacity: 0;
+    }
 }
 
 
-body > main > article > section.alienpoppetje > section.lichaam {
-    position: absolute;
-    width: 9em;
-    height: 8em;
-    left: calc(50% - 4.5em);
-    top: calc(50% + 0.5em);
-    border-radius: 0em 0em 2em 2em;
-    background-image:
-        linear-gradient(to bottom,
-            #4EABC6 0%,
-            #4EABC6 20%,
-            #5A554F 20%,
-            #5A554F 25%,
-            #4EABC6 25%,
-            #4EABC6 60%,
-            #2780AC 60%,
-            #2780AC 70%,
-            #4EABC6 70%,
-            #4EABC6 100%);
-}
 
-body > main > article > section.alienpoppetje > section.hoofd {
-    position: absolute;
-    width: 11em;
-    height: 8em;
-    left: calc(50% - 5.5em);
-    top: calc(50% - 4.5em);
-    border-radius: 50%;
-    background-color: #B2C81D;
-    z-index: 2;
-}
-
-/*
-body > main > article > section.alienpoppetje > section.onderkin {
-    position: absolute;
-    width: 10em;
-    height: 7em;
-    left: calc(50% - 5em);
-    top: calc(50% - 3.2em);
-    border-radius: 50%;
-    background-color: #5A554F;
-    z-index: 1;
-}
-*/
-
-body > main > article > section.alienpoppetje > section.mond {
-    position: absolute;
-    width: 7em;
-    height: 0.2em;
-    left: calc(50% - 3.5em);
-    top: calc(50% + 1em);
-    border-radius: 0.5em;
-    background-color: #5A554F;
-    z-index: 2;
-}
-
-body > main > article > section.alienpoppetje > section.mond > section.binnenkant {
-    position: absolute;
-    width: 2em;
-    height: 1em;
-    left: calc(50% - 1em);
-    top: calc(50% - .5em);
-    border-radius: 50%;
-    background-color: #5A554F;
-}
-
-body > main > article > section.alienpoppetje > section.oorlinks {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 1.5em solid transparent;
-    border-right: 1.1em solid transparent;
-    border-bottom: 4em solid #B2C81D;
-    left: calc(50% - 6.5em);
-    top: calc(50% - 5em);
-    transform: rotate(-5deg);
-}
+/*///////////////////////*/
+/*TEKSTEN OVER DE WOODY'S*/
+/*///////////////////////*/
 
 
-body > main > article > section.alienpoppetje > section.oorrechts {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 1.5em solid transparent;
-    border-right: 1.1em solid transparent;
-    border-bottom: 4em solid #B2C81D;
-    right: calc(50% - 6.5em);
-    top: calc(50% - 5em);
-    transform: rotate(5deg);
-}
 
-body > main > article > section.alienpoppetje > section.antene {
-    position: absolute;
-    width: 0.5em;
-    height: 4em;
-    background-color: #B2C81D;
-    left: calc(50% - 0.25em);
-    top: calc(50% - 7.5em);
-}
 
-body > main > article > section.alienpoppetje > section.antene > section.stipje {
-    position: absolute;
-    width: 1.2em;
-    height: 1.2em;
-    border-radius: 50%;
-    background-color: #B2C81D;
-    left: calc(50% - 0.6em);
-    top: calc(50% - 2.5em);
-}
 
-body > main > article > section.alienpoppetje > section.benenlinks {
-    position: absolute;
-    width: 2.5em;
-    height: 1.7em;
-    background-color: #2780AC;
-    border-radius: 0em 0em 0.5em 0.5em;
-    left: calc(50% - 3em);
-    top: calc(50% + 8.5em);
-}
 
-body > main > article > section.alienpoppetje > section.benenrechts {
-    position: absolute;
-    width: 2.5em;
-    height: 1.7em;
-    background-color: #2780AC;
-    border-radius: 0em 0em 0.5em 0.5em;
-    right: calc(50% - 3em);
-    top: calc(50% + 8.5em);
+
+p {
+    font-family: 'ToyStory';
+    color: black;
+    font-size: 0.8em;
+    font-weight: 900;
+    text-transform: uppercase;
 }

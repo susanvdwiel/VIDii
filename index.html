@@ -9,35 +9,93 @@
     <title>VIDii 2011/22 - Tijdlijn</title>
 
     <link href="styles/style.css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.png">
 </head>
 
-<body class="woodyinlucht">
+<body>
+    <!-- Wanneer er op het logo wordt geklikt ga je door naar de tijdlijn-pagina -->
     <header>
         <a href="binnenkomst.html"><img src="images/1024px-Toy_Story_logo.svg.png" alt="logo van Toy Story"></a>
     </header>
     <article>
+        <!-- De wolkenachtergrond met vijf wolken -->
         <section class="wolkenachtergrond">
+            <!-- Op wolk 1 zit onder de hover een karakter, namelijk de aliën -->
             <div class="wolk1">
                 <div class="cirkel1"></div>
                 <div class="cirkel2"></div>
                 <div class="cirkel3"></div>
                 <div class="cirkel4"></div>
                 <div class="cirkel5"></div>
+                <section class="alienpoppetje">
+                    <section class="lichaam"></section>
+                    <section class="hoofd"></section>
+                    <section class="mond">
+                        <section class="binnenkant"></section>
+                    </section>
+                    <section class="oorlinks"></section>
+                    <section class="oorrechts"></section>
+                    <section class="antene">
+                        <section class="stipje"></section>
+                    </section>
+                    <section class="benenlinks"></section>
+                    <section class="benenrechts"></section>
+                </section>
             </div>
+            <!-- Op wolk 2 zit onder de hover een karakter, namelijk het aardappelhoofd -->
             <div class="wolk2">
                 <div class="cirkel1"></div>
                 <div class="cirkel2"></div>
                 <div class="cirkel3"></div>
                 <div class="cirkel4"></div>
                 <div class="cirkel5"></div>
+                <section class="aardappelpoppetje">
+                    <section class="lichaam"></section>
+                    <section class="hoed"></section>
+                    <section class="onderkanthoed"></section>
+                    <section class="oorlinks"></section>
+                    <section class="oorrechts"></section>
+                    <section class="neus"></section>
+                    <section class="neusonderkant"></section>
+                    <section class="snorlinks"></section>
+                    <section class="snorrechts"></section>
+                    <section class="mond"></section>
+                    <section class="voetlinks"></section>
+                    <section class="voetrechts"></section>
+                </section>
             </div>
+            <!-- Op wolk 3 zit onder de hover een karakter, namelijk de hond -->
             <div class="wolk3">
                 <div class="cirkel1"></div>
                 <div class="cirkel2"></div>
                 <div class="cirkel3"></div>
                 <div class="cirkel4"></div>
                 <div class="cirkel5"></div>
+                <section class="hondpoppetje">
+                    <section class="hoofd"></section>
+                    <section class="nek"></section>
+                    <section class="lichaam"></section>
+                    <section class="mond"></section>
+                    <section class="neus"></section>
+                    <section class="oorlinks">
+                        <section class="binnenste"></section>
+                        <section class="extra"></section>
+                    </section>
+                    <section class="oorrechts">
+                        <section class="binnenste"></section>
+                        <section class="extra"></section>
+                    </section>
+                    <section class="pootlinks">
+                        <section class="voet"></section>
+                    </section>
+                    <section class="pootrechts">
+                        <section class="voet"></section>
+                    </section>
+                    <section class="ijzerdraad">
+                        <section class="cirkel1"></section>
+                        <section class="cirkel2"></section>
+                    </section>
+                </section>
             </div>
             <div class="wolk4">
                 <div class="cirkel1"></div>
@@ -53,17 +111,11 @@
                 <div class="cirkel4"></div>
                 <div class="cirkel5"></div>
             </div>
-            <div class="wolk6">
-                <div class="cirkel1"></div>
-                <div class="cirkel2"></div>
-                <div class="cirkel3"></div>
-                <div class="cirkel4"></div>
-                <div class="cirkel5"></div>
-            </div>
         </section>
     </article>
 
     <main>
+        <!-- De onderdelen van de grijper -->
         <article class="woody">
             <section class="grijper">
                 <section class="touw">
@@ -73,6 +125,7 @@
                     <section class="knijper_onderkantr"></section>
                 </section>
             </section>
+            <!-- De onderdelen van Woody -->
             <section class="woodypoppetje">
                 <section class="lichaam"></section>
                 <section class="hoofd"></section>
@@ -110,73 +163,51 @@
                     <div class="schoen"></div>
                 </section>
                 <section class="broekspijp_rechts">
-                    <div class="sok"></div>
+                    <div class="sok"></div> 
                     <div class="schoen"></div>
                 </section>
             </section>
         </article>
-<!--
-        <article>
-            <section class="alienpoppetje">
-                <section class="lichaam"></section>
-                <section class="hoofd"></section>
-                <section class="onderkin"></section>
-                <section class="mond">
-                    <section class="binnenkant"></section>
-                </section>
-                <section class="oorlinks"></section>
-                <section class="oorrechts"></section>
-                <section class="antene">
-                    <section class="stipje"></section>
-                </section>
-                <section class="benenlinks"></section>
-                <section class="benenrechts"></section>
-            </section>
-        </article>
--->
-
-
+        <!-- De buttons dat als tijdlijn fungeert met verschillende Woody's uit de jaartallen -->
         <ol class="buttonslinks">
             <li>
-                <a class="beweeg" href="#"><img src="images/Button_1995.png" alt="#"></a>
+                <button class="beweeg1995"> <img src="images/Button_1995.png" alt="button1995"></button>
             </li>
             <li>
-                <a href="#"><img src="images/Button_1996.png" alt="#"></a>
+                <button class="beweeg1996"><img src="images/Button_1996.png" alt="button1996"></button>
             </li>
             <li>
-                <a href="#"><img src="images/Button_1999.png" alt="#"></a>
+                <button class="beweeg1999"><img src="images/Button_1999.png" alt="button1999"></button>
             </li>
             <li>
-                <a href="#"><img src="images/Button_2010.png" alt="#"></a>
+                <button class="beweeg2010"><img src="images/Button_2010.png" alt="button2010"></button>
             </li>
         </ol>
         <ol class="buttonsrechts">
             <li>
-                <a href="#"><img src="images/Button_2011.png" alt="#"></a>
+                <button class="beweeg2011"><img src="images/Button_2011.png" alt="button2011"></button>
             </li>
             <li>
-                <a href="#"><img src="images/Button_2013.png" alt="#"></a>
+                <button class="beweeg2013"><img src="images/Button_2013.png" alt="button2013"></button>
             </li>
             <li>
-                <a href="#"><img src="images/Button_2014.png" alt="#"></a>
+                <button class="beweeg2014"><img src="images/Button_2014.png" alt="button2014"></button>
             </li>
             <li>
-                <a href="#"><img src="images/Button_2019.png" alt="#"></a>
+                <button class="beweeg2019"><img src="images/Button_2019.png" alt="button2019"></button>
             </li>
         </ol>
 
+        <!-- De afbeeldingen van de Woody's uit de verschillende jaartallen -->
         <article class="verschillendewoodys">
-            <!--
-            <section class="woodyuit1995"><img src="images/1995.png"></section>
-            <section><img src="images/1996.png"></section>
-            <section><img src="images/1999.png"></section>
-            <section><img src="images/2010.png"></section>
-            <section><img src="images/2011.png"></section>
-            <section><img src="images/2013.png"></section>
-            <section><img src="images/2014.png"></section>
-            <section><img src="images/2019.png"></section>
--->
-
+            <section class="beweeg1995"><img src="images/1995.png" alt="Woody uit 1995"></section>
+            <section class="beweeg1996"><img src="images/1996.png" alt="Woody uit 1996"></section>
+            <section class="beweeg1999"><img src="images/1999.png" alt="Woody uit 1999"></section>
+            <section class="beweeg2010"><img src="images/2010.png" alt="Woody uit 2010"></section>
+            <section class="beweeg2011"><img src="images/2011.png" alt="Woody uit 2011"></section>
+            <section class="beweeg2013"><img src="images/2013.png" alt="Woody uit 2013"></section>
+            <section class="beweeg2014"><img src="images/2014.png" alt="Woody uit 2014"></section>
+            <section class="beweeg2019"><img src="images/2019.png" alt="Woody uit 2019"></section>
         </article>
     </main>
 
