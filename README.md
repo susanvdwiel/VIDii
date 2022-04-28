@@ -61,14 +61,19 @@ Mijn startniveau is: rood
   #### oplossing:
   Toen ik de gordijntjes had gemaakt, vond ik het nog erg kaal staan. Daarom heb ik tekst toegevoegd met een quote uit de film "you've got a friend in me" om de witruimte wat meer op te vullen.
   
-  <img src="readme-images/ideeVrachtwagen.jpg" width="375px" alt="Woody_achter_een_vrachtwagen">
+  <img src="readme-images/gordijntjes.jpg" width="375px" alt="Tekst_voor_gordijntjes">
+  
   
   
   ### Too much:
   Bovenop de gordijntjes én de tekst had ik eerst ook nog de CSS gemaakte Woody. Dit werd allemaal too much. Daarom kwam uit de feedback om de Woody ergens anders voor te gebruiken. 
+  
+  <img src="readme-images/tooMuch.jpg" width="375px" alt="Woody_voor_tekst_en_gordijntjes">
 
   #### oplossing:
   De Woody heb ik nu met een animatie achter de gordijnen gezet. Hij komt samen tevoorschijn met de buttons en de grijper.
+  
+  <img src="readme-images/woodyInMidden.jpg" width="375px" alt="Woody_in_het_midden">
   
   
   
@@ -78,6 +83,8 @@ Mijn startniveau is: rood
   #### oplossing:
   Daarom heb ik ervoor gekozen om een tweede HTML pagina aan te maken. Als je op het logo klikt, kun je door naar de volgende pagina waarbij de grijper, Woody en de buttons te zien zijn.
 
+  <img src="readme-images/wolkenAchtergrond.jpg" width="375px" alt="Wolken_achtergrond">
+  
 </details>
 
 
@@ -106,6 +113,7 @@ Mijn startniveau is: rood
   #### oplossing:
   We hebben een container om de wolk gezet, zodat ik op de container een hover kan zetten en niet op een onderdeel van de wolk zelf. Door het karakter aan te roepen met “~ :hover”, kan je de wolk het karakter hover meegeven. 
 
+  <img src="readme-images/hoverState.jpg" width="375px" alt="Bij_hover_een_karakter">
 
 
   ### Uitdaging van de buttons:
@@ -116,6 +124,8 @@ Mijn startniveau is: rood
   
   Aan een vriend vroeg ik hulp en hij had mij uiteindelijk geholpen om de button werkend te krijgen, maar om een tweede button ook te laten werken ging niet. Daarom heb ik eerst op internet gekeken, maar ik kwam er niet uit.
   Dit heb ik afgelopen dinsdag met Sanne opgelost. De geschreven Javascript om de buttons werkend te laten maken ziet er op deze manier logisch uit, maar om het zelf te schrijven is nog lastig.
+
+  <img src="readme-images/grijperButton.jpg" width="375px" alt="De_grijper_met_Woody">
 
 
 
@@ -132,6 +142,8 @@ Mijn startniveau is: rood
 
   #### oplossing:
   Daarom heb ik ervoor gekozen om een pijltje te maken met "klik op mij!" om duidelijk te maken waar je op moet klikken om naar de grijper en buttons te gaan.
+  
+  <img src="readme-images/klikOpMij.jpg" width="375px" alt="Klik_op_mij">
   
 </details>
 
@@ -160,8 +172,10 @@ Mijn startniveau is: rood
 
   #### oplossing:
   Daarom had ik gekeken of het mooi zou zijn om alle buttons aan de linkerkant te zetten en de grijper ook wat meer naar links te zetten, zodat ik aan de rechterkant plek heb om de tekst te plaatsen. Alleen vond ik dit echt niet mooi. Daarom heb ik het zo gelaten en had ik het idee om het rechtsonder te plaatsen.
-
-
+  
+  <img src="readme-images/ruimteTekst.jpg" width="375px" alt="Ruimte_voor_tekst">
+  
+  
 
   ### Font invoegen:
   Aangezien het me leuk leek om nog een stukje tekst toe te voegen (van onder andere de verschillende Woody’s) heb ik het font van Toy Story gedownload via Font Squirrel. In de les werd dit voorgedaan en het zag er redelijk simpel uit. Totdat ik het zelf ging proberen. Het aanroepen van het lettertype in de CSS ging niet goed, waardoor ik de tekst niet het lettertype mee kon geven.
@@ -181,8 +195,12 @@ Mijn startniveau is: rood
   <summary>Mijn eindresultaat & persoonlijke ontwikkeling</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="final ontwerp">
+  <img src="readme-images/eindresultaatScherm1.jpg" width="375px" alt="eindresultaat_scherm_1">
+  <img src="readme-images/eindresultaatScherm2.jpg" width="375px" alt="eindresultaat_scherm_2">
+  <img src="readme-images/eindresultaatScherm3.jpg" width="375px" alt="eindresultaat_scherm_3">
+  <img src="readme-images/eindresultaatScherm4.jpg" width="375px" alt="eindresultaat_scherm_4">
 
+  
 
   ### Dit ging goed/Heb ik geleerd: 
   Tijdens interface en interactie heb ik geleerd hoe je je ideeën kunt realiseren met CSS. In het eerste en tweede leerjaar hebben we veel lessen gehad met HTML en CSS, dus ik heb al kunnen oefenen met HTML en CSS. Voornamelijk in de CSS week heb ik geleerd hoe je karakters kunt maken en animaties kunt toevoegen. Deze twee weken was het weer even opfrissen, maar ik merkte dat het bezig gaan met animaties erg goed ging. 
@@ -191,10 +209,14 @@ Mijn startniveau is: rood
   
   Ik vond het ook leuk dat we elke dag een stukje theorie kregen. Dit was opfrissing, maar ook daar heb ik veel van geleerd. Zo weet ik nu hoe ik een font kan inladen, custom propperties kan gebruiken zoals var(—) en hoe kleuren eigenlijk in elkaar zitten. Dit vond ik erg leerzaam.
 
+  
+  
   ### Dit was lastig/is niet gelukt:
   Ik merkte dat mijn HTML-structuur soms niet helemaal optimaal was waardoor ik snel dubbele CSS ging schrijven. Zoals de achtergrond, de wolkjes, hiervoor heb ik aardig wat regels moeten schrijven wat denk ik niet per sé nodig hoeft te zijn. De rondjes van de wolken zijn namelijk allemaal hetzelfde, alleen de positie is per wolkje anders. 
   
   Ook vond ik het soms best lastig om andere klasgenoten te helpen. Ondertussen weet ik hoe ik karakters kan maken, maar echt technische dingen begrijp ik nog niet. Zo maakte ik bijvoorbeeld eerst met de wolken een fout door de wolk geen grootte te geven. Er waren zo best wat schoonheidsfoutjes.
+  
+  
   
   ### Wat als ik meer tijd had?:
   Als ik meer tijd zou hebben gehad, had ik teksten bij de Woody’s uit de verschillende jaren willen zetten. Dit was een drempel voor mij omdat ik niet wist hoe ik dit moest doen. De Woody’s komen pas tevoorschijn wanneer je op de button hebt geklikt. Er zou dan weer Javascript geschreven moeten worden wanneer je bijvoorbeeld om de Woody zou klikken voor de tekst. Ik zat nog te stoeien met een hover op een Woody waarbij de tekst rechtsonder in beeld zou komen. Dus net als je over een wolk hovert er een karakter komt. Dit lukte mij alleen niet.
