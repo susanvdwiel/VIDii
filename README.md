@@ -14,8 +14,7 @@ Mijn startniveau is: rood
   <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
 
   ### De eerste versie/schets:
-  <img src="readme-images/Ideeen_genereren" width="375px" alt="eerste versie/schets">
-
+  <img src="readme-images/ideeengenereren" width="375px" alt="eersteideeën">
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
