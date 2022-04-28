@@ -35,7 +35,7 @@ Mijn startniveau is: rood
   ### Verandering in karakter:
   Eerst had ik het idee om voor Mario te kiezen, maar wanneer meer dan de halve klas hiervoor had gekozen dacht ik aan Yoshi. Een ander karakter van Mario, maar ook deze was al door een ander gekozen. Dat vond ik jammer. Daarom ben ik gaan brainstormen over een ander karakter.
   
-  <img src="../readme-images/xxxxxxxxxxxx" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/ideeengenereren.jpg" width="375px" alt="eersteversie/schets">
   
   #### oplossing:
   Uiteindelijk, tijdens de eerste feedbackronde, ben ik samen met Noa gaan brainstormen. Zo kwam ik uit tot <strong>Toy Story</strong>. De verschillen in (onder andere) Woody zijn niet heel groot, maar er zijn wel verschillende versies van Toy Story. Zo is er een Family Guy versie en zijn er verschillende mini story's "Toy Story Toons" waar veel niet van weten. Deze wil ik gaan verwerken in de tijdlijn.
