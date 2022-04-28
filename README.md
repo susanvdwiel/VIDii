@@ -14,7 +14,7 @@ Mijn startniveau is: rood
   <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
 
   ### De eerste versie/schets:
-  <img src="readme-images/Ideeen_genereren" width="375px" alt="eerste versie/schets">
+  <img src="./readme-images/Ideeen_genereren" width="375px" alt="eerste versie/schets">
 
 
   ### Je ambitie: 
@@ -36,7 +36,7 @@ Mijn startniveau is: rood
   ### Verandering in karakter:
   Eerst had ik het idee om voor Mario te kiezen, maar wanneer meer dan de halve klas hiervoor had gekozen dacht ik aan Yoshi. Een ander karakter van Mario, maar ook deze was al door een ander gekozen. Dat vond ik jammer. Daarom ben ik gaan brainstormen over een ander karakter.
   
-  <img src="readme-images/xxxxxxxxxxxx" width="375px" alt="eerste versie/schets">
+  <img src="./readme-images/xxxxxxxxxxxx" width="375px" alt="eerste versie/schets">
   
   #### oplossing:
   Uiteindelijk, tijdens de eerste feedbackronde, ben ik samen met Noa gaan brainstormen. Zo kwam ik uit tot <strong>Toy Story</strong>. De verschillen in (onder andere) Woody zijn niet heel groot, maar er zijn wel verschillende versies van Toy Story. Zo is er een Family Guy versie en zijn er verschillende mini story's "Toy Story Toons" waar veel niet van weten. Deze wil ik gaan verwerken in de tijdlijn.
@@ -46,8 +46,8 @@ Mijn startniveau is: rood
   ### Verandering in concept:
   Het concept waar ik mee begon was dat Woody aan een touw hangt achter een vrachtwagen. Dit is een bekend stukje in Toy Story. Het leek mij daarbij leuk dat de touw fungeerde als een tijdlijn. Tijdens het uitwerken vond ik het niet mooi worden. Ik zou dan veel gebruik moeten maken van IMG's en dat vond ik jammer, want mijn uitdaging lag juist bij het (meeste van de karakters) maken met CSS. 
   
-  <img src="readme-images/Eerste_idee" width="375px" alt="eerste versie/schets">
-  <img src="readme-images/IdeeVrachtwagen_uitwerking" width="375px" alt="eerste versie/schets">
+  <img src="./readme-images/Eerste_idee" width="375px" alt="eerste versie/schets">
+  <img src="./readme-images/IdeeVrachtwagen_uitwerking" width="375px" alt="eerste versie/schets">
   
   #### oplossing:
   Daarom ben ik verder gaan brainstormen. Ik keek naar inspiratie op Pinterest en kwam erachter dat in veel posters gebruik werd gemaakt van een grote grijper. Een soort grijpmachine. Dit idee vond ik erg leuk en ben ik op door gaan genereren. Zo leek het mij leuk dat de Woody's van de verschillende jaartallen naar boven werden gehaald met de grijper en op die manier de tijdlijn erin verwerken.
@@ -92,7 +92,7 @@ Mijn startniveau is: rood
   
   …dat ik bij veel stukjes tekst nog geen commentaar had toegevoegd. Bij sommige stukken code had ik al wel een kopje, maar om verschillende regels “uit te leggen” had ik nog niet toegevoegd.
   
-  …dat er nog geen font is toegevoegd. Dit komt omdat ik nog geen tekst heb. Dit ben ik wel van plan om nog toe te voegen. Dit zou ik invoegen door middel van een XXXX
+  …dat er nog geen font is toegevoegd. Dit komt omdat ik nog geen tekst heb. Dit ben ik wel van plan om nog toe te voegen.
   
   …dat sommige onderdelen CSS nog niet gelijk liepen met de HTML. De CSS is op dit moment nog een klein zooitje, dus hier moet ik wat meer structuur inbrengen door de CSS in de zelfde volgorde te laten lopen als de HTML.
   
@@ -210,9 +210,7 @@ Mijn startniveau is: rood
 
 ## Bronnenlijst
 <details open>
-<summary>continu bijhouden terwijl je werkt</summary>
-
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
+<summary>De gebruikte bronnen</summary>
 
 1. https://docs.google.com/document/d/1fykeP6x9FXZpMS-gJWUH_iWMemnRDyI-NrctrQU_cxg/edit
 2. https://css-tricks.com/the-shapes-of-css/
