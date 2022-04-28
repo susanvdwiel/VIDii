@@ -61,6 +61,7 @@ Mijn startniveau is: rood
   #### oplossing:
   Toen ik de gordijntjes had gemaakt, vond ik het nog erg kaal staan. Daarom heb ik tekst toegevoegd met een quote uit de film "you've got a friend in me" om de witruimte wat meer op te vullen.
   
+  <img src="readme-images/ideeVrachtwagen.jpg" width="375px" alt="Woody_achter_een_vrachtwagen">
   
   
   ### Too much:
